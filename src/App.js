@@ -1,12 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Table from './components/Table';
+import { PlanetProvider } from './components/PlanetContext';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <p>REDUX é MELHOR!</p>
-    </div>
+    <PlanetProvider>
+      <div className="App">
+        <Header />
+        <Table />
+      </div>
+    </PlanetProvider>
   );
 }
 
