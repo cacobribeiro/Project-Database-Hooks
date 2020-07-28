@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { createContext, useState } from 'react';
 
 const PlanetContext = createContext();
@@ -13,6 +14,10 @@ const PlanetProvider = ({ children }) => {
     setHeaders,
   };
   return <PlanetContext.Provider value={context}>{children}</PlanetContext.Provider>;
+};
+
+PlanetProvider.propTypes = {
+  children: PropTypes.element.isRequired,
 };
 
 export { PlanetProvider, PlanetContext };
