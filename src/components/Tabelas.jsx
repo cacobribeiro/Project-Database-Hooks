@@ -23,7 +23,6 @@ function Tabela(props) {
 }
 
 Tabela.propTypes = {
-  i: PropTypes.number.isRequired,
   planet: PropTypes.shape({
     climate: PropTypes.string,
     created: PropTypes.string,

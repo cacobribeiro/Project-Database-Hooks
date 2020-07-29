@@ -43,7 +43,7 @@ function Table() {
         </thead>
         <tbody>
           {results.map((planet, i) => (
-            <Tabelas key={i} planet={planet} i={i} />
+            <Tabelas key={planet.name} planet={planet} i={i} />
           ))}
         </tbody>
       </table>
