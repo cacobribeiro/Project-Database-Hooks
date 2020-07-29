@@ -30,14 +30,17 @@ const PlanetProvider = ({ children }) => {
   const addValues = (newcolumn, newcomparison, newvalue) => {
     setFiltros((old) => ({
       ...old,
-      filterByNumericValues: [...old.filterByNumericValues, { newcolumn, newcomparison, newvalue }],
+      filterByNumericValues: [
+        ...old.filterByNumericValues,
+        { column: newcolumn, comparison: newcomparison, value: newvalue },
+      ],
     }));
   };
 
   const SortButton = (newsort, newcolumn) => {
     setFiltros((old) => ({
       ...old,
-      order: { newcolumn, newsort },
+      order: { column: newcolumn, sort: newsort },
     }));
   };
 

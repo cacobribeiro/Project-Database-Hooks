@@ -28,6 +28,7 @@ function Table() {
   if (filtros.loading) return <span>L O A D I N G . . . . . </span>;
   let results = allFilters(planets);
   results = sortData(results, filtros.order.sort, filtros.order.column);
+
   return (
     <div>
       <table>
