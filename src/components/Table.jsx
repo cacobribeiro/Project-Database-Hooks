@@ -6,8 +6,8 @@ import Tabelas from './Tabelas';
 function Table() {
   const { planets, headers, filtros } = useContext(PlanetContext);
   const allFilters = (dataPlanets) => {
-    const planets = dataPlanets.filter((planet) => planet.name.includes(filtros.filterByName.name));
-    if (filtros.filterByNumericValues.length === 0) return planets;
+    const results = dataPlanets.filter((planet) => planet.name.includes(filtros.filterByName.name));
+    if (filtros.filterByNumericValues.length === 0) return results;
     return filtros.filterByNumericValues.reduce((acc, filtro) => {
       const { column, comparison, value } = filtro;
       return acc.filter((planet) => {
@@ -22,7 +22,7 @@ function Table() {
             return false;
         }
       });
-    }, planets);
+    }, results);
   };
 
   if (filtros.loading) return <span>L O A D I N G . . . . . </span>;

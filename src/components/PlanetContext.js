@@ -27,17 +27,17 @@ const PlanetProvider = ({ children }) => {
     },
   });
 
-  const addValues = (column, comparison, value) => {
+  const addValues = (newcolumn, newcomparison, newvalue) => {
     setFiltros((old) => ({
       ...old,
-      filterByNumericValues: [...old.filterByNumericValues, { column, comparison, value }],
+      filterByNumericValues: [...old.filterByNumericValues, { newcolumn, newcomparison, newvalue }],
     }));
   };
 
-  const SortButton = (sort, column) => {
+  const SortButton = (newsort, newcolumn) => {
     setFiltros((old) => ({
       ...old,
-      order: { column, sort },
+      order: { newcolumn, newsort },
     }));
   };
 

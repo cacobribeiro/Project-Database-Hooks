@@ -1,4 +1,4 @@
-export const sortlines = [
+const sortlines = [
   'name',
   'rotation_period',
   'orbital_period',
@@ -13,3 +13,5 @@ export const sortlines = [
   'edited',
   'url',
 ];
+
+export default sortlines;

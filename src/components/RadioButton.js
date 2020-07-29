@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { PlanetContext } from './PlanetContext';
-import { sortlines } from '../services/sortLines';
+import sortlines from '../services/sortLines';
 
 const RadioButton = () => {
   const { SortButton, setSort, sort, setSortColumn, sortColumn } = useContext(PlanetContext);

@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 function Tabela(props) {
-  const { planet, i } = props;
+  const { planet } = props;
   return (
-    <tr key={i}>
+    <tr key={planet.name}>
       <td data-testid="planet-name">{planet.name}</td>
       <td>{planet.rotation_period}</td>
       <td>{planet.orbital_period}</td>

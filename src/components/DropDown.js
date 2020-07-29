@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import RadioButton from './RadioButton';
 import { PlanetContext } from './PlanetContext';
-import { selectedColumn } from './FuncAuxiliares';
+import selectedColumn from './FuncAuxiliares';
 import filtrosFeitos from './FiltrosFeitos';
 
 const DropDown = () => {
@@ -16,20 +16,6 @@ const DropDown = () => {
     addValues,
     deletFilter,
   } = useContext(PlanetContext);
-
-  // const filtrosFeitos = () => {
-  //   if (filtros.filterByNumericValues.length > 0) {
-  //     return filtros.filterByNumericValues.map((e, index) => (
-  //       <span key={index} data-testid="filter">
-  //         <p>{e.column}</p>
-  //         <button onClick={() => deletFilter(index)} type="button" key={e.column}>
-  //           X
-  //         </button>
-  //       </span>
-  //     ));
-  //   }
-  //   return null;
-  // };
 
   return (
     <div>

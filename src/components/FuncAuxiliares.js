@@ -9,7 +9,7 @@ const filtrosOptions = (filtros) => {
   return values;
 };
 
-export const selectedColumn = (filtros, setColumn) => {
+const selectedColumn = (filtros, setColumn) => {
   const values = filtrosOptions(filtros);
   return (
     <select
@@ -26,3 +26,5 @@ export const selectedColumn = (filtros, setColumn) => {
     </select>
   );
 };
+
+export default selectedColumn;
