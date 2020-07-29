@@ -4,7 +4,7 @@ import { PlanetContext } from './PlanetContext';
 import DropDown from './DropDown';
 
 function Header() {
-  const { setPlanets, setHeaders, filtros, inputText } = useContext(PlanetContext);
+  const { planets, setPlanets, setHeaders, filtros, inputText } = useContext(PlanetContext);
 
   useEffect(() => {
     getPlanets().then((data) => {
