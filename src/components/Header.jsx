@@ -1,9 +1,11 @@
 import React, { useContext, useEffect } from 'react';
 import getPlanets from '../services/ServiceApi';
 import { PlanetContext } from './PlanetContext';
+import DropDown from './DropDown';
 
 function Header() {
   const { setPlanets, setHeaders } = useContext(PlanetContext);
+
   useEffect(() => {
     getPlanets().then((data) => {
       setPlanets(data.results);
@@ -14,6 +16,7 @@ function Header() {
   return (
     <div>
       <p>Aqui fica os Filtros</p>
+      <DropDown />
     </div>
   );
 }

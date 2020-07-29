@@ -19,7 +19,7 @@ function Table() {
         </thead>
         <tbody>
           {planets.map((planet, i) => (
-            <Tabelas planet={planet} i={i} />
+            <Tabelas key={i} planet={planet} i={i} />
           ))}
         </tbody>
       </table>
