@@ -4,7 +4,7 @@ import { PlanetContext } from './PlanetContext';
 import DropDown from './DropDown';
 
 function Header() {
-  const { setPlanets, setHeaders } = useContext(PlanetContext);
+  const { setPlanets, setHeaders, filtros, inputText } = useContext(PlanetContext);
 
   useEffect(() => {
     getPlanets().then((data) => {
@@ -15,7 +15,15 @@ function Header() {
 
   return (
     <div>
-      <p>Aqui fica os Filtros</p>
+      <label htmlFor="seachBar">
+        <input
+          data-testid="name-filter"
+          onChange={(e) => inputText(e.target.value)}
+          type="text"
+          value={filtros.filterByName.name}
+          placeholder="Termo de pesquisa"
+        />
+      </label>
       <DropDown />
     </div>
   );

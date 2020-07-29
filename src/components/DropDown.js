@@ -15,7 +15,7 @@ const DropDown = () => {
   } = useContext(PlanetContext);
 
   const filtrosOptions = () => {
-    console.log(filtros.filterByNumericValues);
+    console.log(filtros);
     console.log(column, comparison, value);
     const values = ['population', 'orbital_period', 'diameter', 'rotation_period', 'surface_water'];
     if (filtros.length > 0) {

@@ -40,7 +40,15 @@ const PlanetProvider = ({ children }) => {
     }));
   };
 
+  const inputText = (event) => {
+    setFiltros((old) => ({
+      ...old,
+      filterByName: { name: event },
+    }));
+  };
+
   const context = {
+    inputText,
     SortButton,
     addValues,
     setFiltros,
