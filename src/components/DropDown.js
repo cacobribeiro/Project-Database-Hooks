@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import RadioButton from './RadioButton';
 import { PlanetContext } from './PlanetContext';
+import { selectedColumn } from './FuncAuxiliares';
 
 const DropDown = () => {
   const {
@@ -15,32 +16,32 @@ const DropDown = () => {
     deletFilter,
   } = useContext(PlanetContext);
 
-  const filtrosOptions = () => {
-    const values = ['population', 'orbital_period', 'diameter', 'rotation_period', 'surface_water'];
-    if (filtros.filterByNumericValues.length > 0) {
-      const filtrados = filtros.filterByNumericValues.map((e) => e.column);
-      return values.filter((e) => !filtrados.includes(e));
-    }
-    return values;
-  };
+  // const filtrosOptions = () => {
+  //   const values = ['population', 'orbital_period', 'diameter', 'rotation_period', 'surface_water'];
+  //   if (filtros.filterByNumericValues.length > 0) {
+  //     const filtrados = filtros.filterByNumericValues.map((e) => e.column);
+  //     return values.filter((e) => !filtrados.includes(e));
+  //   }
+  //   return values;
+  // };
 
-  const selectedColumn = () => {
-    const values = filtrosOptions();
-    return (
-      <select
-        onChange={(e) => setColumn(e.target.value)}
-        data-testid="column-filter"
-        name="dropdown-filter-category"
-      >
-        <option value="">--</option>
-        {values.map((e) => (
-          <option key={e} value={e}>
-            {e}
-          </option>
-        ))}
-      </select>
-    );
-  };
+  // const selectedColumn = () => {
+  //   const values = filtrosOptions();
+  //   return (
+  //     <select
+  //       onChange={(e) => setColumn(e.target.value)}
+  //       data-testid="column-filter"
+  //       name="dropdown-filter-category"
+  //     >
+  //       <option value="">--</option>
+  //       {values.map((e) => (
+  //         <option key={e} value={e}>
+  //           {e}
+  //         </option>
+  //       ))}
+  //     </select>
+  //   );
+  // };
 
   const filtrosFeitos = () => {
     if (filtros.filterByNumericValues.length > 0) {
@@ -59,7 +60,7 @@ const DropDown = () => {
   return (
     <div>
       <form>
-        {selectedColumn()}
+        {selectedColumn(filtros, setColumn)}
         <select
           onChange={(e) => setComparison(e.target.value)}
           data-testid="comparison-filter"
