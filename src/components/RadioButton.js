@@ -1,24 +1,9 @@
 import React, { useContext } from 'react';
 import { PlanetContext } from './PlanetContext';
-
+import { sortlines } from '../services/sortLines';
 const RadioButton = () => {
   const { SortButton, setSort, sort, setSortColumn, sortColumn } = useContext(PlanetContext);
 
-  const sortlines = [
-    'name',
-    'rotation_period',
-    'orbital_period',
-    'diameter',
-    'climate',
-    'gravity',
-    'terrain',
-    'surface_water',
-    'population',
-    'films',
-    'created',
-    'edited',
-    'url',
-  ];
   return (
     <div>
       <select onChange={(event) => setSortColumn(event.target.value)} data-testid="column-sort">
