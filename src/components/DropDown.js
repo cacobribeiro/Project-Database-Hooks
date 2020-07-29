@@ -12,12 +12,13 @@ const DropDown = () => {
     setValue,
     filtros,
     addValues,
+    deletFilter,
   } = useContext(PlanetContext);
 
   const filtrosOptions = () => {
     const values = ['population', 'orbital_period', 'diameter', 'rotation_period', 'surface_water'];
-    if (filtros.length > 0) {
-      const filtrados = filtros.map((e) => e.column);
+    if (filtros.filterByNumericValues.length > 0) {
+      const filtrados = filtros.filterByNumericValues.map((e) => e.column);
       return values.filter((e) => !filtrados.includes(e));
     }
     return values;
@@ -42,11 +43,11 @@ const DropDown = () => {
   };
 
   const filtrosFeitos = () => {
-    if (filtros.length > 0) {
-      return filtros.map((e, index) => (
+    if (filtros.filterByNumericValues.length > 0) {
+      return filtros.filterByNumericValues.map((e, index) => (
         <span key={index} data-testid="filter">
           <p>{e.column}</p>
-          <button type="button" key={e.column}>
+          <button onClick={() => deletFilter(index)} type="button" key={e.column}>
             X
           </button>
         </span>

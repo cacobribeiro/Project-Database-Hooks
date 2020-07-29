@@ -18,6 +18,7 @@ const PlanetProvider = ({ children }) => {
   });
 
   const [filtros, setFiltros] = useState({
+    loading: true,
     filterByName: { name: '' },
     filterByNumericValues: [],
     order: {
@@ -47,28 +48,36 @@ const PlanetProvider = ({ children }) => {
     }));
   };
 
+  const deletFilter = (filter) => {
+    setFiltros((old) => ({
+      ...old,
+      filterByNumericValues: old.filterByNumericValues.filter((filtro, index) => index !== filter),
+    }));
+  };
+
   const context = {
-    inputText,
+    deletFilter,
     SortButton,
-    addValues,
-    setFiltros,
-    filtros,
-    setAddFilter,
     addFilter,
-    planets,
-    setPlanets,
-    headers,
-    setHeaders,
+    addValues,
     column,
-    setColumn,
     comparison,
+    filtros,
+    headers,
+    inputText,
+    planets,
+    setAddFilter,
+    setColumn,
     setComparison,
-    value,
-    setValue,
+    setFiltros,
+    setHeaders,
+    setPlanets,
     setSort,
-    sort,
     setSortColumn,
+    setValue,
+    sort,
     sortColumn,
+    value,
   };
   return <PlanetContext.Provider value={context}>{children}</PlanetContext.Provider>;
 };

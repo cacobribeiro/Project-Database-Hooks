@@ -33,7 +33,7 @@ const RadioButton = () => {
           onChange={() => setSort('ASC')}
           type="radio"
           name="radio"
-          data-testid="column-sort-input"
+          data-testid="column-sort-input-asc"
           value="ASC"
         />
         ASC
@@ -43,7 +43,7 @@ const RadioButton = () => {
           onChange={() => setSort('DESC')}
           type="radio"
           name="radio"
-          data-testid="column-sort-input"
+          data-testid="column-sort-input-desc"
           value="DESC"
         />
         DESC

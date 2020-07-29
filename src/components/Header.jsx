@@ -4,12 +4,13 @@ import { PlanetContext } from './PlanetContext';
 import DropDown from './DropDown';
 
 function Header() {
-  const { planets, setPlanets, setHeaders, filtros, inputText } = useContext(PlanetContext);
+  const { setPlanets, setHeaders, filtros, inputText, setFiltros } = useContext(PlanetContext);
 
   useEffect(() => {
     getPlanets().then((data) => {
       setPlanets(data.results);
       setHeaders(Object.keys(data.results[0]));
+      setFiltros((e) => ({ ...e, loading: false }));
     });
   }, []);
 
