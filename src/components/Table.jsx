@@ -31,7 +31,7 @@ function Table() {
 
   return (
     <div>
-      <table>
+      <table className="table table-dark">
         <thead>
           <tr>
             {headers

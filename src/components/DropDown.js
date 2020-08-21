@@ -19,33 +19,46 @@ const DropDown = () => {
 
   return (
     <div>
-      <form>
-        {selectedColumn(filtros, setColumn)}
-        <select
-          onChange={(e) => setComparison(e.target.value)}
-          data-testid="comparison-filter"
-          name="dropdown-quantity-filter"
-        >
-          <option value="">--</option>
-          <option value="maior que">maior que</option>
-          <option value="menor que">menor que</option>
-          <option value="igual a">igual a</option>
-        </select>
-        <label htmlFor="input-value">
-          <input
-            type="number"
-            data-testid="value-filter"
-            placeholder="Digite um número"
-            onChange={(e) => setValue(e.target.value)}
-          />
-        </label>
-        <button
-          onClick={() => addValues(column, comparison, value)}
-          type="button"
-          data-testid="button-filter"
-        >
-          Submit
-        </button>
+      <form className=" container mb-5">
+        <div className=" container d-flex">
+          {selectedColumn(filtros, setColumn)}
+          <select
+            onChange={(e) => setComparison(e.target.value)}
+            data-testid="comparison-filter"
+            className="form-control form-control-sm"
+            style={{ width: '150px' }}
+            name="dropdown-quantity-filter"
+          >
+            <option value="">--</option>
+            <option value="maior que">maior que</option>
+            <option value="menor que">menor que</option>
+            <option value="igual a">igual a</option>
+          </select>
+          <div style={{ width: '250px' }} class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                Search
+              </span>
+            </div>
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Digite um número"
+              aria-describedby="basic-addon1"
+              onChange={(e) => setValue(e.target.value)}
+            />
+          </div>
+          <div>
+            <button
+              onClick={() => addValues(column, comparison, value)}
+              type="button"
+              data-testid="button-filter"
+              className="btn-primary btn-sm"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
         <RadioButton />
       </form>
       {filtrosFeitos(filtros, deletFilter)}

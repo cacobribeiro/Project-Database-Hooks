@@ -16,15 +16,23 @@ function Header() {
 
   return (
     <div>
-      <label htmlFor="seachBar">
-        <input
-          data-testid="name-filter"
-          onChange={(e) => inputText(e.target.value)}
-          type="text"
-          value={filtros.filterByName.name}
-          placeholder="Termo de pesquisa"
-        />
-      </label>
+      <div className="container m-auto">
+        <div style={{ width: '250px' }} class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              Search
+            </span>
+          </div>
+          <input
+            data-testid="name-filter"
+            value={filtros.filterByName.name}
+            type="text"
+            class="form-control"
+            placeholder="Termo de pesquisa"
+            onChange={(e) => inputText(e.target.value)}
+          />
+        </div>
+      </div>
       <DropDown />
     </div>
   );

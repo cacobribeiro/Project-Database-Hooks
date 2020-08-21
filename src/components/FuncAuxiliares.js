@@ -15,6 +15,8 @@ const selectedColumn = (filtros, setColumn) => {
     <select
       onChange={(e) => setColumn(e.target.value)}
       data-testid="column-filter"
+      style={{ width: '150px' }}
+      className="form-control form-control-sm"
       name="dropdown-filter-category"
     >
       <option value="">--</option>
