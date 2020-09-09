@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Project-Database-Hooks/static/css/main.050523cc.chunk.css",
+    "main.js": "/Project-Database-Hooks/static/js/main.73b98608.chunk.js",
+    "main.js.map": "/Project-Database-Hooks/static/js/main.73b98608.chunk.js.map",
+    "runtime-main.js": "/Project-Database-Hooks/static/js/runtime-main.67838070.js",
+    "runtime-main.js.map": "/Project-Database-Hooks/static/js/runtime-main.67838070.js.map",
+    "static/css/2.11829350.chunk.css": "/Project-Database-Hooks/static/css/2.11829350.chunk.css",
+    "static/js/2.fe1ec7a4.chunk.js": "/Project-Database-Hooks/static/js/2.fe1ec7a4.chunk.js",
+    "static/js/2.fe1ec7a4.chunk.js.map": "/Project-Database-Hooks/static/js/2.fe1ec7a4.chunk.js.map",
+    "index.html": "/Project-Database-Hooks/index.html",
+    "precache-manifest.ac02428073521ff53165ea9d37c233aa.js": "/Project-Database-Hooks/precache-manifest.ac02428073521ff53165ea9d37c233aa.js",
+    "service-worker.js": "/Project-Database-Hooks/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/Project-Database-Hooks/static/css/2.11829350.chunk.css.map",
+    "static/css/main.050523cc.chunk.css.map": "/Project-Database-Hooks/static/css/main.050523cc.chunk.css.map",
+    "static/js/2.fe1ec7a4.chunk.js.LICENSE.txt": "/Project-Database-Hooks/static/js/2.fe1ec7a4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67838070.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.fe1ec7a4.chunk.js",
+    "static/css/main.050523cc.chunk.css",
+    "static/js/main.73b98608.chunk.js"
+  ]
+}
